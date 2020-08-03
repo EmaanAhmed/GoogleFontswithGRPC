@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package ShoppingCartPackage;
+
+service ShoppingCart {
+    rpc shoppingCart(voidNoParam) returns (stream FontFamily);
+    rpc add(AddRequest) returns (voidNoParam);
+    rpc remove(RemoveRequest) returns (voidNoParam) ;
+}
+
+message voidNoParam {
+}
+
+
+message AddRequest {
+  string fontFamily = 1;
+}
+
+message RemoveRequest {
+  string fontFamily = 1;
+}
+
+message FontFamily {
+    string name = 1;
+}
+
+message FontFamilies {
+    repeated FontFamily fontFamilies = 1;
+}
