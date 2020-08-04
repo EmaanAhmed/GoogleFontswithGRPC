@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package shoppingcart;
+
+service ShoppingCart {
+  rpc Add(AddRequest) returns (AddReply) {}
+  rpc Remove(RemoveRequest) returns (RemoveReply) {}
+  rpc ShoppingCart(ShoppingCartRequest) returns (stream ShoppingCartReply) {}
+}
+
+message AddRequest { string fontFamily = 1; }
+
+message AddReply {}
+
+message RemoveRequest { string fontFamily = 1; }
+
+message RemoveReply {}
+
+message ShoppingCartRequest {}
+
+message ShoppingCartReply { repeated string fontFamilies = 1; }

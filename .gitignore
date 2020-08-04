@@ -16,10 +16,8 @@ flutter_state_exploration/ios/Podfile
 *.pbxproj
 *.xcscheme
 *.swift
-*.md
 *.storyboard
 *.h
-*.yaml
 *.html
 flutter_state_exploration/test/widget_test.dart
 grpc_server/.idea/grpc_server.iml
